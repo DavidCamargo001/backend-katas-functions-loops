@@ -45,6 +45,7 @@ def fibonacci(n):
     result = 0
     firstNum = 0
     secNum = 1
+    # for loop was here
     if n == 0: 
         result = 0 
     elif n==1: 
@@ -60,5 +61,9 @@ def fibonacci(n):
 
 
 if __name__ == '__main__':
-    
+    print(add(2, 4))
+    print(multiply(5, 6))
+    print(power(2, 3))
+    print(factorial(6))
+    print(fibonacci(8))
     pass
