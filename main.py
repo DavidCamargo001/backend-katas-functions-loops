@@ -26,7 +26,7 @@ def power(x, n):
     """Raise x to power n, where n >= 0"""
     power = 1
     for i in range(abs(n)):
-        power = multiply(power, x) 
+        power = multiply(power, x)
     return power
 
 
@@ -41,16 +41,17 @@ def factorial(x):
             factorial = multiply(factorial, x)
     return factorial
 
+
 def fibonacci(n):
     result = 0
     firstNum = 0
     secNum = 1
     # for loop was here
-    if n == 0: 
-        result = 0 
-    elif n==1: 
+    if n == 0:
+        result = 0
+    elif n == 1:
         result = 1
-    elif n==2: 
+    elif n == 2:
         result = 1
     else:
         for _ in range(n-1):
