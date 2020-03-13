@@ -6,34 +6,59 @@ __author__ = "???"
 
 def add(x, y):
     """Add two integers. Handles negative values."""
-    # your code here
-    return
+    sum = 0
+    sum = x + y
+    return sum
 
 
 def multiply(x, y):
     """Multiply x with y. Handles negative values of x or y."""
-    # your code here
-    return
+    result = 0
+    for _ in range(abs(y)):
+        if y >= 0:
+            result = add(result, x)
+        else:
+            result = add(result, -x)
+    return result
 
 
 def power(x, n):
     """Raise x to power n, where n >= 0"""
-    # your code here
-    return
+    power = 1
+    for i in range(abs(n)):
+        power = multiply(power, x) 
+    return power
 
 
 def factorial(x):
     """Compute factorial of x, where x > 0"""
-    # your code here
-    return
-
+    factorial = x
+    if x <= 1:
+        return 1
+    else:
+        while (x > 1):
+            x -= 1
+            factorial = multiply(factorial, x)
+    return factorial
 
 def fibonacci(n):
-    """Compute the nth term of fibonacci sequence"""
-    # your code here
-    return
+    result = 0
+    firstNum = 0
+    secNum = 1
+    if n == 0: 
+        result = 0 
+    elif n==1: 
+        result = 1
+    elif n==2: 
+        result = 1
+    else:
+        for _ in range(n-1):
+            result = add(firstNum, secNum)
+            firstNum = secNum
+            secNum = result
+    return result
 
 
 if __name__ == '__main__':
-    # your code to call functions above
+    
     pass
